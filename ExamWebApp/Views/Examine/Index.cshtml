@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="card">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">You Can Create</p>
+            <a asp-controller="Group" asp-action="Create"> <button type="button" class="btn btn-primary">  Group </button></a>
+            <a asp-controller="Student" asp-action="Create"> <button type="button" class="btn btn-primary">  Student </button></a>
+            <a asp-controller="Teacher" asp-action="Create"> <button type="button" class="btn btn-primary">  Teacher </button></a>
+            <a asp-controller="Examine" asp-action="Create"> <button type="button" class="btn btn-primary">  Examine </button></a>
+            <a asp-controller="ExamItem" asp-action="Create"> <button type="button" class="btn btn-primary">  Create ExamOfStudent </button></a>
+
+            <a asp-controller="ExamItem" asp-action="Index"> <button type="button" class="btn btn-primary">  ExamineItem </button></a>
+        </div>
+    </div>

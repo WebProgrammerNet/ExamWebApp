@@ -1,0 +1,48 @@
+﻿@model NewTeacherViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form method="post" enctype="multipart/form-data" data-file-dragndrop>
+                            <div class="form-group">
+                                <label asp-for="Name">Name</label>
+                                <input asp-for="Name" type="text" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Surname">Surname</label>
+                                <input asp-for="Surname" type="text" class="form-control" />
+                                <span asp-validation-for="Surname" class="text-danger"></span>
+                            </div>                      
+                            <div class="form-group" style="width:200px">
+                                <label asp-for="Subject">Please Select Subject</label>
+                                <select asp-for="SubjectId" class="form-control" asp-items="@(new SelectList(ViewBag.Subject, "SubjectId", "Name"))"></select>
+                                <span asp-validation-for="Subject" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="StudentPhoto">StudentPhoto</label>  
+                                <input asp-for="StudentPhoto" multiple="multiple" class="form-control" accept="image\*" />
+                                <span asp-validation-for="StudentPhoto" class="text-danger"></span>
+                            </div>
+
+                            <input type="submit" class="btn btn-primary" value="Create" />
+                        </form>
+                    </div>
+
+                    <div class="col-md-6">
+
+                        @*<img src="~/img/Createproduct/Capture.PNG" style="width:100%" />*@
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
